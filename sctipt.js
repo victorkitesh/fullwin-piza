@@ -1,3 +1,4 @@
-$(document).ready(function(){
-    alert(hi)
-})
+//  the business logic
+function pizza(size,crust,toppings) {
+    
+}
