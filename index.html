@@ -3,13 +3,12 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    
     <title>fullwin pizza</title>
   </head>
   <body>
-    <form class="row">
 
+    <form id="form">
       <div class="card-body">
 
         <label class="form-controle">select piza</label>
@@ -42,9 +41,28 @@
 
         <label>quantity</label>  
         <input type="number" value="1" min="1"><br> 
+
+        <button type="submit">Order</button>
       </div>
       
-    </form>
+
+  </form>
+  <button id="view-order">View Order Summary</button>
+  
+  <table id="table" class="table table-sm text-small">
+      <tr>
+          <th>Pizza</th><th>Size</th><th>QTY</th><th>Price</th><th>Total</th>
+      </tr>
+      <tbody id="our-order">
+      </tbody>
+      <tfoot class="text-right">
+          <tr class="text-right"><td colspan="4" id="total"></td></tr>
+      </tfoot>
+  </table>
+    
+
+    <script   src="jquery.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <script src="sctipt.js"></script>
    
   </body>
 </html>
