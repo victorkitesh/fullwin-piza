@@ -1,6 +1,6 @@
 //  the business logic
 const form = document.querySelector('#form');
-const btnViewOrder = document.querySelector("#view-order");
+
 const tot = document.querySelector("#total");
 let cart = [];
 form.addEventListener("submit", function(event){
@@ -18,3 +18,26 @@ form.addEventListener("submit", function(event){
     localStorage.setItem("cart", JSON.stringify(cart));
   }
 });
+
+const btnViewOrder = document.querySelector("#view-order");
+btnViewOrder.addEventListener('click',function  () {
+    let cart =JSON.parse(localStorage.getItem("cart"));
+    cart.forEach(element => {
+        document.querySelector("#table").innerHTML += `<tr>
+      <td>${element['selectpizza']}</td>
+      <td>${element['pizzasize']}</td>
+      <td>${element['crust']}</td>
+      <td>${element['toppings']}</td>
+      
+
+
+      </tr>`;
+
+
+
+
+
+    });
+   
+    
+})

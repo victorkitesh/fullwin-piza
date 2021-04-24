@@ -11,8 +11,8 @@
     <form id="form">
       <div class="card-body">
 
-        <label class="form-controle">select piza</label>
-         <select name="select piza" id="selectpiza"><br>
+        <label class="form-controle">select pizza</label>
+         <select name="selectpizza" id="selectpizza"><br>
            <option value="Pepperoni Pizza">Pepperoni Pizza</option>
            <option value="Hawaiian Pizza">Hawaiian Pizza </option>
            <option value=" BBQ Chicken Pizza"> BBQ Chicken Pizza</option>
@@ -40,7 +40,7 @@
           </select><br>
 
         <label>quantity</label>  
-        <input type="number" value="1" min="1"><br> 
+        <input id="qty" type="number" value="1" min="1"><br> 
 
         <button type="submit">Order</button>
       </div>
@@ -51,7 +51,10 @@
   
   <table id="table" class="table table-sm text-small">
       <tr>
-          <th>Pizza</th><th>Size</th><th>QTY</th><th>Price</th><th>Total</th>
+          <th>Pizza</th>
+          <th>Size</th> 
+          <th>crust</th> 
+          <th>toppings</th>
       </tr>
       <tbody id="our-order">
       </tbody>
