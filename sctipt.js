@@ -1,7 +1,7 @@
 //  the business logic
 const form = document.querySelector('#form');
 
-const tot = document.querySelector("#total");
+
 let cart = [];
 form.addEventListener("submit", function(event){
   event.preventDefault();
@@ -12,7 +12,7 @@ form.addEventListener("submit", function(event){
       order[key]  = fd.get(key).toString();
     }
   }
-  order["total"] = parseInt(order["qty"] * order["price"]);
+  
   cart.push(order);
   if(confirm("This pizza will be added to your cart")){
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -32,12 +32,7 @@ btnViewOrder.addEventListener('click',function  () {
 
 
       </tr>`;
-
-
-
-
-
     });
    
-    
 })
+var 
