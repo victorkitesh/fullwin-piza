@@ -1,5 +1,7 @@
 //  the business logic
 const form = document.querySelector('#form');
+let qty = document.querySelector('#qty')
+
 
 
 let cart = [];
@@ -33,6 +35,27 @@ btnViewOrder.addEventListener('click',function  () {
 
       </tr>`;
     });
+
+    
+
+
    
-})
-var 
+});
+
+class pizza{
+    constructor(sizeprize,crustprize,toppingsprize){
+        this.sizeprize=sizeprize;
+        this.crustprize=crustprize;
+        this.toppingsprize=toppingsprize;
+        
+    }
+}
+PepperoniPizzasmall=  new pizza(500,100,150);
+PepperoniPizzamedium=  new pizza(600,100,100);
+PepperoniPizzalarge=  new pizza(700,100,200);
+HawaiianPizzasmall=  new pizza(500,100,120);
+HawaiianPizzamedium=  new pizza(600,100,130);
+HawaiianPizzalarge=  new pizza(700,100,180);
+BBQChickenPizzasmall=  new pizza(500,100,170);
+BBQChickenPizzamedium=  new pizza(600,100,200);
+BBQChickenPizzalarge=  new pizza(700,100,140);
