@@ -1,4 +1,4 @@
-body{
+.body{
     background-image: url(images/pizza2.jpeg);
     background-size:cover;
     background-repeat: no-repeat;
@@ -9,4 +9,9 @@ body{
 #table{
   
    color: aliceblue;
+}
+.header{
+    color: white;
+    text-align: center;
+    background-color: red;
 }

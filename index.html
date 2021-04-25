@@ -7,6 +7,12 @@
     <title>fullwin pizza</title>
   </head>
   <body>
+    <div class="header">
+      <h1>Fullwin pizza inn</h1>
+      <P>welcom to fullwin pizza inn only the best ingredients!</P>
+    </div>
+   
+    <div class="body">
 
     <form id="form">
       <div class="card-body">
@@ -42,7 +48,7 @@
         <label>quantity</label>  
         <input id="qty" type="number" value="1" min="1"><br> 
 
-        <button type="submit">Order</button>
+        <button type="submit" onsubmit="calcdelivery()">Order</button>
       </div>
       
 
@@ -55,6 +61,8 @@
           <th>Size</th> 
           <th>crust</th> 
           <th>toppings</th>
+          <th>qty</th>
+          
       </tr>
       <tbody id="our-order">
       </tbody>
@@ -63,18 +71,21 @@
       </tfoot>
   </table>
   <div id="calculate">
-    <select name="delivery" id="delivery">
-      <option value="">i don't want delivery</option>
-      <option value="">i want delivery</option>
-    </select>
+    <form >
+      <label for="delivery">Select delivery.</label><br>
+          <input type="radio" name="delivery" id="male" oninput="clearOutput()">i dont want deliver <br>
+          <input type="radio" name="delivery" id="female" oninput="clearOutput()">delivery<br>
 
-    
+     </form>
 
   </div>
+  <h4>Total Amount</h4>
+  <p id="demo">total</p>
+ 
     
 
     <script   src="jquery.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
     <script src="sctipt.js"></script>
-   
+  </div>
   </body>
 </html>

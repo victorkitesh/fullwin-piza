@@ -1,6 +1,7 @@
 //  the business logic
 const form = document.querySelector('#form');
-let qty = document.querySelector('#qty')
+let qty = document.getElementById('qty')
+var delivery = document.getElementById('delivery');
 
 
 
@@ -21,6 +22,7 @@ form.addEventListener("submit", function(event){
   }
 });
 
+
 const btnViewOrder = document.querySelector("#view-order");
 btnViewOrder.addEventListener('click',function  () {
     let cart =JSON.parse(localStorage.getItem("cart"));
@@ -30,32 +32,72 @@ btnViewOrder.addEventListener('click',function  () {
       <td>${element['pizzasize']}</td>
       <td>${element['crust']}</td>
       <td>${element['toppings']}</td>
+      <td>${element['qty']}</td>
+
       
 
 
       </tr>`;
     });
+    class pizza{
+        constructor(sizeprize,crustprize,toppingsprize,total){
+            this.sizeprize=sizeprize;
+            this.crustprize=crustprize;
+            this.toppingsprize=toppingsprize;
+            this.total=total
+        }
+        ptotal(){
+           return true;
+        }
+
+    }
+    PepperoniPizzasmall=  new pizza(500,100,150,750);
+    PepperoniPizzamedium=  new pizza(600,100,100);
+    PepperoniPizzalarge=  new pizza(700,100,200);
+    HawaiianPizzasmall=  new pizza(500,100,120);
+    HawaiianPizzamedium=  new pizza(600,100,130);
+    HawaiianPizzalarge=  new pizza(700,100,180);
+    BBQChickenPizzasmall=  new pizza(500,100,170);
+    BBQChickenPizzamedium=  new pizza(600,100,200);
+    BBQChickenPizzalarge=  new pizza(700,100,140);
+    var total1=PepperoniPizzasmall.total
+    
+    
+    
+    
+    
+    
+    if(PepperoniPizzasmall.ptotal ){
+      return document.getElementById("demo").innerHTML = total1;
+    }
+  
 
     
 
 
    
 });
-
-class pizza{
-    constructor(sizeprize,crustprize,toppingsprize){
-        this.sizeprize=sizeprize;
-        this.crustprize=crustprize;
-        this.toppingsprize=toppingsprize;
-        
-    }
+function getdelivery(event) {
+    event.preventDefault
+    let delivery;
+    if ((form.delivery[0].checked === true) || (form.gender[1].checked === true)) {
+        if (form.delivery[0].checked === true) {
+            delivery = 0;
+        } else if (form.gender[1].checked === true) {
+            delivery = 1;
+        }
+        return delivery;
+    } 
 }
-PepperoniPizzasmall=  new pizza(500,100,150);
-PepperoniPizzamedium=  new pizza(600,100,100);
-PepperoniPizzalarge=  new pizza(700,100,200);
-HawaiianPizzasmall=  new pizza(500,100,120);
-HawaiianPizzamedium=  new pizza(600,100,130);
-HawaiianPizzalarge=  new pizza(700,100,180);
-BBQChickenPizzasmall=  new pizza(500,100,170);
-BBQChickenPizzamedium=  new pizza(600,100,200);
-BBQChickenPizzalarge=  new pizza(700,100,140);
+function calcdelivery() {
+   let delivery =getdelivery();
+   let result;
+   if (delivery === 0) {
+        result=0
+   }else if(delivery === 1) {
+    result=200
+    document.getElementById('result').innerHTML = "Your delivery fee is " + result + "."
+   }
+
+}
+
