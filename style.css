@@ -2,7 +2,8 @@
     background-image: url(images/pizza2.jpeg);
     background-size:cover;
     background-repeat: no-repeat;
-    text-align: center;padding-top: 200px;
+   
+    text-align: center;
     color: white;
    
 }
@@ -10,8 +11,28 @@
   
    color: aliceblue;
 }
+h1{
+    font-family: monospace;
+}
 .header{
     color: white;
     text-align: center;
     background-color: red;
+
+}
+#calculate{
+  color: rgb(3, 0, 0);
+}
+#view-order{
+    background-color: red;
+}
+.button{
+    background-color: green;
+}
+span{
+    font-size: xx-large;
+}
+h4{
+    font-size: x-large;
+    font-weight: 700;
 }

@@ -32,7 +32,7 @@ btnViewOrder.addEventListener('click',function  () {
       <td>${element['pizzasize']}</td>
       <td>${element['crust']}</td>
       <td>${element['toppings']}</td>
-      <td>${element['qty']}</td>
+      <td>${["qty".value]}</td>
 
       
 
