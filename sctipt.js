@@ -80,10 +80,10 @@ btnViewOrder.addEventListener('click',function  () {
 function getdelivery(event) {
     event.preventDefault
     let delivery;
-    if ((form.delivery[0].checked === true) || (form.gender[1].checked === true)) {
+    if ((form.delivery[0].checked === true) || (form.delivery[1].checked === true)) {
         if (form.delivery[0].checked === true) {
             delivery = 0;
-        } else if (form.gender[1].checked === true) {
+        } else if (form.delivery[1].checked === true) {
             delivery = 1;
         }
         return delivery;
@@ -94,10 +94,12 @@ function calcdelivery() {
    let result;
    if (delivery === 0) {
         result=0
+        prompt("enter location")
    }else if(delivery === 1) {
     result=200
     document.getElementById('result').innerHTML = "Your delivery fee is " + result + "."
    }
 
 }
+
 
